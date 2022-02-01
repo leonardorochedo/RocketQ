@@ -1,0 +1,152 @@
+.content {
+  max-width: min(
+    112rem,
+    90%
+  ); /* como ele ta centralizado diminuindo o tamanho do header geral ele vai diminuir os lados automaticamente */
+}
+
+#room header {
+  width: 100%;
+  display: flex;
+
+  align-items: center; /* centralizando */
+  justify-content: space-between; /* separando os conteudos */
+}
+
+#room header .buttons {
+  display: flex; /* alinhando tudo do header em uma linha */
+}
+
+#room header .buttons .button:nth-child(1) {
+  margin-right: 0.8rem; /* espaço entre os botao */
+  padding: 1.3rem 1.6rem; /* ajustando tamanho do button */
+}
+
+#room header .buttons .button:nth-child(1) img {
+  margin-left: 1rem; /* dando left do icon para o text */
+  width: 2rem; /* ajustando tamanho do icon */
+  height: 2rem;
+}
+
+#room header .buttons .button:nth-child(2) {
+  padding: 1.3rem 3.2rem; /* ajustando tamanho do btton */
+}
+
+#room header .buttons .button:nth-child(2) img {
+  width: 2rem; /* ajustando tamanho do icon */
+  height: 2rem;
+}
+
+#question-form h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  color: var(--black);
+  font-weight: 700; /* peso da fonte */
+  line-height: 4.2rem;
+
+  margin-bottom: 2.4rem;
+}
+
+#question-form form {
+  border: 0.2rem solid var(--grey-blue); /* bordas do form */
+  padding: 1.6rem; /* de dentro pra fora */
+  border-radius: 0 0.8rem 0.8rem 0.8rem; /* arredondando */
+
+  margin-bottom: 1.6rem;
+}
+
+#question-form form textarea {
+  width: 100%; /* esticas ate o final da pg */
+  resize: none; /* sem remodelar pelo site */
+
+  outline: none; /* tirando bordas quando clicar no p digitar */
+  background: transparent; /* tirando o fundo branco */
+}
+
+#question-form form textarea::placeholder {
+  color: var(--grey-blue);
+}
+
+#question-form form footer {
+  display: flex; /* um ao lado do outro */
+  align-items: center; /* centralizar verticalmente */
+  justify-content: space-between; /* espaço entre eles */
+}
+
+#question-form form footer > div {
+  /* ">" = sao aplicadas apenas ás filhas diretas de footer no caso */
+  display: flex;
+  align-items: center;
+  color: var(--icons-details);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+#question-form form footer > div img {
+  margin-right: 0.9rem;
+}
+
+#question-form form footer button {
+  height: auto; /* altura automatica */
+  padding: 0.8rem 2.4rem;
+  line-height: 2.4rem; /*  */
+}
+
+/* question */
+.question-wrapper {
+  background: var(--light-blue);
+  margin-bottom: 0.8rem; /* dando espaço em baico */
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+  padding: 2.4rem;
+}
+
+.question-wrapper .question-content {
+  display: flex;
+  align-items: flex-start; /* ALINHANDO EIXO X */
+}
+
+.question-wrapper .question-content .user {
+  background: var(--blue);
+  clip-path: circle();
+  padding: 1.4rem;
+}
+
+.question-wrapper .question-content p {
+  margin-left: 1.6rem;
+  word-break: break-word; /* se vc escreve uma palavra mt grande ela nao quebra o layout */
+  display: flex;
+  align-items: center;
+  min-height: 5.5rem; /* maximizando a altura pro conteudo  */
+}
+
+.question-wrapper .actions {
+  display: flex; /* ativando o flex */
+  align-items: center; /* eixo x */
+  justify-content: flex-end; /* jogando pro final do content X */
+}
+
+.question-wrapper .actions > a {
+  display: flex; /* ativando o flex */
+  align-items: center; /* eixo x */
+  justify-content: flex-end; /* jogando pro final do content X */
+}
+
+.question-wrapper .actions > a > img {
+  margin-right: 0.8rem;
+}
+
+.question-wrapper .actions > a + a {
+  /* ">" = filho direto / "+" = irmao  */
+  margin-left: 2.4rem;
+}
+
+/* question read */
+.question-wrapper.read {
+  /* quando marcar como lido */
+  background: var(--grey-medium);
+}
+
+.question-wrapper.read .question-content .user {
+  background: var(--grey-blue);
+}
